@@ -1,5 +1,5 @@
 import React from 'react';
-import { Redirect } from 'react-router-dom';
+import { Navigate } from 'react-router-dom';
 import './Login.css';
 
 class Logout extends React.Component {
@@ -9,7 +9,7 @@ class Logout extends React.Component {
         return (
             <React.Fragment>
                 <span>Adios!</span>
-                <Redirect to='/' />
+                <Navigate to='/' />
             </React.Fragment>
         );
     }

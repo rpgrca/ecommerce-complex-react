@@ -1,5 +1,5 @@
 import React from 'react';
-import { Redirect, Link } from 'react-router-dom';
+import { Navigate, Link } from 'react-router-dom';
 import Header from './Header';
 import Footer from './Footer';
 import Configuration from '../configuration';
@@ -74,7 +74,7 @@ class Register extends React.Component {
 
     render() {
         if (this.state.success) {
-            return <Redirect to='/' />
+            return <Navigate to='/' />
         }
         else {
             if (this.state.error) {

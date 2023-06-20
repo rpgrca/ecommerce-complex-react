@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Link, Redirect } from 'react-router-dom';
+import { Link, Navigate } from 'react-router-dom';
 import Configuration from '../configuration';
 import './Product.css';
 
@@ -35,7 +35,7 @@ class Product extends Component {
     render() {
         if (this.mustLogin) {
             this.mustLogin = false;
-            return <Redirect to="/cart" />
+            return <Navigate to="/cart" />
         }
         else {
             if (this.state.message) {
