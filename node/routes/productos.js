@@ -23,7 +23,7 @@ router.get('/categoria/:categoria', cp.listarPorCategoria);
 /**
  * Ruta por defecto para /productos, cualquier url desconocida es redireccionada a la raiz.
  */
-router.get('*', function(req, res) {
+router.get(/(.*)/, function(req, res) {
     res.redirect('/');
 });
 
